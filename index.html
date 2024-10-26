@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santiago | Portfolio</title>
+    <link rel="icon" type="image/png" href="./images/icon.png">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: white;
+            background-color: #e0e0e0;
+            background-image: url('./images/black.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            width: 250px;
+            background-color: #1e1e1e;
+            color: white;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            height: 100vh;
+        }
+
+        .sidebar img {
+            width: 110px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .sidebar h1 {
+            font-size: 1.7rem;
+            margin: 15px 0;
+        }
+
+        .sidebar p {
+            font-size: 1rem;
+            color: #bbb;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        .nav-links a {
+            color: grey;
+            text-decoration: none;
+            font-size: 1.1rem;
+            margin: 15px 0;
+            display: block;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #fff;
+        }
+
+        /* Main Content */
+        .content {
+            flex: 1;
+            padding: 40px;
+            overflow-y: auto;
+        }
+
+        section {
+            margin-bottom: 60px;
+        }
+
+        section h2 {
+            font-size: 2rem;
+            color: white;
+            border-bottom: 2px solid white;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+        }
+
+        /* Skills Section */
+        .skills ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            list-style: none;
+        }
+
+        .skills li {
+            background-color: black;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Projects Section */
+        .project-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .project {
+            background-color: #fff;
+            color: black;
+            padding: 20px;
+            width: calc(50% - 20px);
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .project:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .project h3 {
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+        }
+
+        .project p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .project a {
+            display: inline-block;
+            background-color: black;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .project a:hover {
+            background-color: #1aa34a;
+        }
+
+        /* Contact Section */
+        .contact-info {
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .contact-info a {
+            color: gray;
+            text-decoration: none;
+            transition: text-decoration 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                padding: 20px;
+                text-align: center;
+            }
+
+            .project {
+                width: 100%;
+            }
+
+            .project-grid {
+                flex-direction: column;
+            }
+
+            .content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar Section -->
+    <div class="sidebar">
+        <img src="./images/lancy.jpg" alt="Lancy">
+        <h1>Lance Benedict Santiago</h1>
+        <p>Student | Gwapo</p>
+        <nav class="nav-links">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </div>
+
+    <!-- Main Content Section -->
+    <div class="content">
+        <!-- About Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hello! To know more about me just add my facebook so we can charchar and i will fall for you and you will broke my little heart kaya wag nalang hays</p>       
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+            </ul>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project-grid">
+                <div class="project">
+                    <h3>Music Streaming Site</h3>
+                    <p>A music streaming site listen some music</p>
+                    <a href="login.html " target="_blank">View Project</a>   
+                </div>
+                <div class="project">
+                    <h3>Project Title 2</h3>
+                    <p>A brief description of the project. Explaining what it does and technologies used.</p>
+                    <a href="#" target="_blank">View Project</a>
+                </div> 
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact</h2>
+            <p class="contact-info">
+                Feel free to reach out if you're interested in collaborating or have any questions.
+                <br>Email: <a href="mailto:yourname@example.com">yourname@example.com</a>
+                <br>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a>
+                <br>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a>
+            </p>
+        </section>
+    </div>
+</body>
+</html>

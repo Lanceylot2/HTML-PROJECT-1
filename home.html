@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="icon" type="image/jpeg" href="./images/music.jpg">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('./images/black.jpg');
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+            max-width: 1200px;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            width: 25%;
+            background-color: #121212;
+            padding: 30px 20px;
+            text-align: center;
+            border-right: 1px solid #333;
+        }
+
+        .sidebar h3 {
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            color: #1db954;
+        }
+
+        .sidebar button {
+            background-color: #1db954;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            margin: 10px 0;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .sidebar button:hover {
+            background-color: #1aa34a;
+        }
+
+        .sidebar p {
+            font-size: 0.9rem;
+            margin: 20px 0;
+            color: #ccc;
+        }
+
+        /* Main Content Styles */
+        .main-content {
+            width: 75%;
+            padding: 30px 20px;
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            color: #1db954;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+
+        .artist-grid, .album-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-around;
+        }
+
+        /* Artist and Album Grid Layout */
+        .artist, .album {
+            width: 30%;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .artist img, .album img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .album img {
+            border-radius: 10px;
+        }
+
+        .artist p, .album p {
+            font-size: 1rem;
+            color: #fff;
+            font-weight: bold;
+            margin-top: 8px;
+        }
+
+        .artist p a {
+            color: #1db954;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .artist p a:hover {
+            color: #1aa34a;
+        }
+
+        .artist:hover img, .album:hover img {
+            transform: scale(1.1);
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+        }
+
+        .artist:hover, .album:hover {
+            transform: translateY(-5px);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Section -->
+        <div class="sidebar">
+            <h3>Your Library</h3>
+            <button>Create Playlist</button>
+            <p>Let’s find some podcasts to follow</p>
+            <button>Browse Podcasts</button>
+            <!-- Logout Button -->
+             <a href="index.html">
+            <button>Logout</button>
+            </a>
+        </div>  
+
+        <!-- Main Content Section -->
+        <div class="main-content">
+            <!-- Popular Artists Section -->
+            <section class="popular-section">
+                <h2>Popular Artists</h2>
+                <div class="artist-grid">
+                    <div class="artist">
+                        <img src="./images/ladygaga.jpg" alt="Lady Gaga">
+                        <p><a href="#" target="_blank">Lady Gaga</a></p>
+                    </div>
+                    <div class="artist">
+                        <img src="./images/dionela.jpg" alt="Dionela">
+                        <p><a href="#" target="_blank">Dionela</a></p>
+                    </div>
+                    <div class="artist">
+                        <img src="./images/taylorswift.jpg" alt="Taylor Swift">
+                        <p><a href="#" target="_blank">Taylor Swift</a></p>
+                    </div>
+                    <div class="artist">
+                        <img src="./images/maki.jpg" alt="Maki">
+                        <p><a href="#" target="_blank">Maki</a></p>
+                    </div>
+                    <div class="artist">
+                        <img src="./images/billieelish.jpg" alt="Billie Eilish">
+                        <p><a href="#" target="_blank">Billie Eilish</a></p>
+                    </div>
+                    <div class="artist">
+                        <img src="./images/tjmonterde.jpg" alt="TJ Monterde">
+                        <p><a href="#" target="_blank">TJ Monterde</a></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Popular Albums Section -->
+            <section class="popular-albums">
+                <h2>Popular Albums</h2>
+                <div class="album-grid">
+                    <div class="album">
+                        <img src="./images/sweet.jpg" alt="Sabrina Carpenter - Short n Sweet">
+                        <p>Short n' Sweet</p>
+                    </div>
+                    <div class="album">
+                        <img src="./images/die.jpg" alt="Lady Gaga, Bruno Mars - Die With A Smile">
+                        <p>Die With A Smile</p>
+                    </div>
+                    <div class="album">
+                        <img src="./images/soft.jpg" alt="Billie Eilish - Hit Me Hard and Soft">
+                        <p>Hit Me Hard and Soft</p>
+                    </div>
+                    <div class="album">
+                        <img src="./images/sining.jpg" alt="Dionela feat. Jay R - Sining">
+                        <p>Sining (feat. Jay R)</p>
+                    </div>
+                    <div class="album">
+                        <img src="./images/kung.jpg" alt="Hev Abi - Kung Alam Mo Lang">
+                        <p>Kung Alam Mo Lang</p>
+                    </div>
+                    <div class="album">
+                        <img src="./images/sour.jpg" alt="Olivia Rodrigo - SOUR">
+                        <p>SOUR</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>

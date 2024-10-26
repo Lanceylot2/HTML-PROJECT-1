@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musik - Login</title>
+    <link rel="icon" type="image/jpeg" href="./images/music.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <style>
+        /* LOGIN */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-image: url('./images/black.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: "Oswald", sans-serif;
+            color: #fff;
+        }
+        .wrapper {
+            background-color: #121212;
+            width: 90%;
+            max-width: 400px;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.7);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .wrapper:hover {
+            transform: scale(1.03);
+            box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.9);
+        }
+        .LOGIN {
+            color: white;
+            background-color: #333;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .field {
+            margin: 15px 0;
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+        label {
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="password"] {
+            background-color: #222;
+            color: #ddd;
+            padding: 12px;
+            border: 1px solid #444;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        input[type="text"]:focus, input[type="password"]:focus {
+            border-color: #73EC8B;
+            box-shadow: 0 0 6px rgba(115, 236, 139, 0.5);
+            outline: none;
+        }
+        input::placeholder {
+            color: #666;
+        }
+        .submit-btn {
+            background-color: #73EC8B;
+            border: none;
+            padding: 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            width: 100%;
+            font-weight: bold;
+            font-size: 1rem;
+            color: black;
+            margin: 20px 0 10px;
+        }
+        .submit-btn:hover {
+            background-color: #63D67A;
+            transform: translateY(-2px);
+        }
+        .register-link {    
+            display: block;
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: #bbb;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .register-link:hover {
+            color: #73EC8B;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+       <h1 class="LOGIN">LOGIN</h1>
+       <hr>
+       <form action="home.html">
+           <div class="field">
+               <label for="username">Username</label>
+               <input type="text" id="username" name="username" placeholder="Enter your username" required>
+           </div>
+           <div class="field">
+               <label for="password">Password</label>
+               <input type="password" id="password" name="password" placeholder="Enter your password" required>
+           </div>
+           <button type="submit" class="submit-btn">Sign In</button> 
+       </form>
+       <a>Don’t have an account? Register</a>
+    </div>
+</body>
+</html>
