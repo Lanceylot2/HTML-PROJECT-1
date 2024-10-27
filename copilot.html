@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #111;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-image: url(./images/black.jpg);
+        }
+
+        .container {
+            display: flex;
+            width: 90%;
+            max-width: 1200px;
+            height: 80vh;
+            background-color: #181818;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            width: 15%;
+            background-color: #202020;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-right: 1px solid #333;
+        }
+
+        .sidebar h2 {
+            font-size: 1.2rem;
+            color: #f5f5f5;
+            margin-bottom: 20px;
+        }
+
+        .sidebar a {
+            color: #aaa;
+            text-decoration: none;
+            margin: 10px 0;
+            transition: color 0.3s;
+            font-size: 1rem;
+        }
+
+        .sidebar a:hover {
+            color: #1db954;
+        }
+
+        /* Album Cover and Lyrics Section */
+        .content {
+            display: flex;
+            width: 85%;
+        }
+
+        /* Album Cover */
+        .album-cover {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #222;
+            padding: 20px; 
+        }
+
+        .album-cover img {
+            width: 80%;
+            max-width: 400px;
+            border-radius: 10px;
+            margin-bottom: 20px; 
+        }
+
+        /* Lyrics Section */
+        .lyrics {
+            width: 50%;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .lyrics h3 {
+            font-size: 1.5rem;
+            color: #1db954;
+            margin-bottom: 15px;
+        }
+
+        .lyrics p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #ccc;
+            margin-bottom: 10px;
+            white-space: pre-line;
+        }
+
+        /* Scrollbar styling */
+        .lyrics::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .lyrics::-webkit-scrollbar-track {
+            background: #333;
+        }
+
+        .lyrics::-webkit-scrollbar-thumb {
+            background-color: #555;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h2>Menu</h2>
+            <a href="home.html">Home</a>
+            <!-- <a href="#">Explore</a>
+            <a href="#">Library</a>
+            <a href="#">Sign In</a> -->
+        </div>
+
+        <!-- Album Cover and Lyrics -->
+        <div class="content">
+            <div class="album-cover">
+                <img src="./images/copilot.jpg" alt="Album Cover">
+                <audio controls autoplay loop>
+                    <source src="./music/Co-Pilot (feat. JOLO, Rjay Ty).mp3" type="audio/mpeg"> 
+                </audio>
+            </div>
+            <div class="lyrics">
+                <h3>Palagi - Shanti Dope</h3>
+                <p>
+                    Ooh yeah<br>
+
+                    Pangakong di mag-iisa
+                    Kasama mo hanggang rurok
+                    Ipikit ang yong mga mata<br>
+                    
+                    La la la la la
+                    Ngayong nandito ka
+                    Hindi inaasahang pangyayari ang nangyari
+                    Mga labi nagtagpo
+                    Punasan na ang mga luha
+                    Ako ang lalayo sa 'yo<br>
+                    
+                    Hayaan mo na ilipad ka ng aking musika
+                    Palayo sa mundo mong walang alam
+                    Kundi pahirapan ka<br>
+                    
+                    Do you wanna fly
+                    You could be my co-pilot
+                    Let me put you in this flight
+                    Make love in the sky or in another planet
+                    Do you wanna fly
+                    You could be my co-pilot
+                    Let me put you in this flight
+                    Make love in the sky or in another planet<br>
+                    
+                    Ready or not, we taking a trip
+                    Fuck it, no luggage vacation it is
+                    Ready to shop with money to blow?
+                    Spend it on outfits, the runway a show
+                    Fashionably late so it's too early to tell
+                    Ask could this be fate then I'm bumin' it in hell
+                    Not in heaven, this is penance
+                    Cause you're learning it in jail
+                    When the lesson is presented
+                    Lord have mercy if we fail
+                    We prevail through the yells all them mood swings bring
+                    Make your mood ring bling
+                    The way your mood swings swing<br>
+                    
+                    Hayaan mo na ilipad ka ng aking musika
+                    Palayo sa mundo mong walang alam
+                    Kundi pahirapan ka<br>
+                    
+                    Do you wanna fly
+                    You could be my co-pilot
+                    Let me put you in this flight
+                    Make love in the sky or in another planet
+                    Make love in the sky or in another planet<br>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

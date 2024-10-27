@@ -86,21 +86,21 @@
             padding-bottom: 10px;
         }
 
-        .artist-grid, .album-grid {
+        .song-grid, .album-grid {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
             justify-content: space-around;
         }
 
-        /* Artist and Album Grid Layout */
-        .artist, .album {
+        /* Song and Album Grid Layout */
+        .song, .album {
             width: 30%;
             text-align: center;
             transition: transform 0.3s;
         }
 
-        .artist img, .album img {
+        .song img, .album img {
             width: 100px;
             height: 100px;
             object-fit: cover;
@@ -113,29 +113,29 @@
             border-radius: 10px;
         }
 
-        .artist p, .album p {
+        .song p, .album p {
             font-size: 1rem;
             color: #fff;
             font-weight: bold;
             margin-top: 8px;
         }
 
-        .artist p a {
+        .song p a {
             color: #1db954;
             text-decoration: none;
             transition: color 0.3s;
         }
 
-        .artist p a:hover {
+        .song p a:hover {
             color: #1aa34a;
         }
 
-        .artist:hover img, .album:hover img {
+        .song:hover img, .album:hover img {
             transform: scale(1.1);
             box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
         }
 
-        .artist:hover, .album:hover {
+        .song:hover, .album:hover {
             transform: translateY(-5px);
         }
 
@@ -146,44 +146,44 @@
         <!-- Sidebar Section -->
         <div class="sidebar">
             <h3>Your Library</h3>
-            <button>Create Playlist</button>
-            <p>Let’s find some podcasts to follow</p>
-            <button>Browse Podcasts</button>
-            <!-- Logout Button -->
-             <a href="index.html">
-            <button>Logout</button>
+            <p>Let’s find some album to follow</p>
+            <a href="index.html">
+                <button>About Me</button>
+            </a>
+            <a href="login.html">
+                <button>Logout</button>
             </a>
         </div>  
 
         <!-- Main Content Section -->
         <div class="main-content">
-            <!-- Popular Artists Section -->
+            <!-- Popular Songs Section -->
             <section class="popular-section">
-                <h2>Popular Artists</h2>
-                <div class="artist-grid">
-                    <div class="artist">
-                        <img src="./images/ladygaga.jpg" alt="Lady Gaga">
-                        <p><a href="#" target="_blank">Lady Gaga</a></p>
+                <h2>Recently Played</h2>
+                <div class="song-grid">
+                    <div class="song">
+                        <img src="./images/palagi.jpg" alt="Shanti Dope">
+                        <p><a href="palagi.html" target="_blank">Shanti Dope - Palagi</a></p>
                     </div>
-                    <div class="artist">
-                        <img src="./images/dionela.jpg" alt="Dionela">
-                        <p><a href="#" target="_blank">Dionela</a></p>
+                    <div class="song">
+                        <img src="./images/copilot.jpg" alt="Just Hush">
+                        <p><a href="copilot.html" target="_blank">Just Hush - Co-Pilot</a></p>
                     </div>
-                    <div class="artist">
+                    <div class="song">
                         <img src="./images/taylorswift.jpg" alt="Taylor Swift">
-                        <p><a href="#" target="_blank">Taylor Swift</a></p>
+                        <p><a href="#" target="_blank">Taylor Swift - Willow</a></p>
                     </div>
-                    <div class="artist">
+                    <div class="song">
                         <img src="./images/maki.jpg" alt="Maki">
-                        <p><a href="#" target="_blank">Maki</a></p>
+                        <p><a href="#" target="_blank">Maki - Sugatan</a></p>
                     </div>
-                    <div class="artist">
+                    <div class="song">
                         <img src="./images/billieelish.jpg" alt="Billie Eilish">
-                        <p><a href="#" target="_blank">Billie Eilish</a></p>
+                        <p><a href="#" target="_blank">Billie Eilish - Bad Guy</a></p>
                     </div>
-                    <div class="artist">
+                    <div class="song">
                         <img src="./images/tjmonterde.jpg" alt="TJ Monterde">
-                        <p><a href="#" target="_blank">TJ Monterde</a></p>
+                        <p><a href="#" target="_blank">TJ Monterde - Hanggang Dito Na Lang</a></p>
                     </div>
                 </div>
             </section>

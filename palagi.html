@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #111;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-image: url(./images/black.jpg);
+        }
+
+        .container {
+            display: flex;
+            width: 90%;
+            max-width: 1200px;
+            height: 80vh;
+            background-color: #181818;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            width: 15%;
+            background-color: #202020;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-right: 1px solid #333;
+        }
+
+        .sidebar h2 {
+            font-size: 1.2rem;
+            color: #f5f5f5;
+            margin-bottom: 20px;
+        }
+
+        .sidebar a {
+            color: #aaa;
+            text-decoration: none;
+            margin: 10px 0;
+            transition: color 0.3s;
+            font-size: 1rem;
+        }
+
+        .sidebar a:hover {
+            color: #1db954;
+        }
+
+        /* Album Cover and Lyrics Section */
+        .content {
+            display: flex;
+            width: 85%;
+        }
+
+        /* Album Cover */
+        .album-cover {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #222;
+            padding: 20px; 
+        }
+
+        .album-cover img {
+            width: 80%;
+            max-width: 400px;
+            border-radius: 10px;
+            margin-bottom: 20px; 
+        }
+
+        /* Lyrics Section */
+        .lyrics {
+            width: 50%;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .lyrics h3 {
+            font-size: 1.5rem;
+            color: #1db954;
+            margin-bottom: 15px;
+        }
+
+        .lyrics p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #ccc;
+            margin-bottom: 10px;
+            white-space: pre-line;
+        }
+
+        /* Scrollbar styling */
+        .lyrics::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .lyrics::-webkit-scrollbar-track {
+            background: #333;
+        }
+
+        .lyrics::-webkit-scrollbar-thumb {
+            background-color: #555;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h2>Menu</h2>
+            <a href="home.html">Home</a>
+            <!-- <a href="#">Explore</a>
+            <a href="#">Library</a>
+            <a href="#">Sign In</a> -->
+        </div>
+
+        <!-- Album Cover and Lyrics -->
+        <div class="content">
+            <div class="album-cover">
+                <img src="./images/palagi.jpg" alt="Album Cover">
+                <audio controls autoplay loop>
+                    <source src="./music/Palagi.mp3" type="audio/mpeg"> 
+                </audio>
+            </div>
+            <div class="lyrics">
+                <h3>Palagi - Shanti Dope</h3>
+                <p>
+                    Oh, 'di ba't kahapon lang ikaw ay nagpaalam?
+                    Hindi ko na alam ang aking gagawin
+                    Bakit nasasaktan? Ano ang pagkukulang?
+                    Dapat bang pagbayaran ang 'di naman inutang?<br>
+    
+                    Umasa kahit na malayo pa 'ko sa pamantayan mo
+                    Ganito pakiramdam no'ng dumadag sa sa pangarap ko
+                    Matagal nating iningatan 'to habang patago ka kitang maranasan
+                    No'ng ikaw ay kahinaan ko, 'tsaka mo 'ko natutunan iwasan<br>
+    
+                    Andiyan agad sa isang tawag mo kaya parang madali sa 'yo bitawan
+                    Mga alaala natin na wala lang sa 'yo, palibhasa, 'di mo kailangan na
+                    'Yoko namang makipaglaban para sa kadahilanang nandiyan siya
+                    Puwede pa din naman na 'di niya malaman, ah, basta 'wag mo 'kong iwanan, puwede ba?<br>
+    
+                    Isip at ang puso, ba't 'di pa palayain?
+                    Nakagapos sa kahapon ang init ng damdamin
+                    Paano, saan, at kailan ka yayakapin?
+                    Sa pag-ikot ng mundo ko sa 'yo, whoa, palagi<br>
+    
+                    Oh, 'di ba't kahapon lang ikaw ay nagpaalam?
+                    Hindi ko na alam ang aking gagawin
+                    Bakit nasasaktan? Ano ang pagkukulang?
+                    Dapat bang pagbayaran ang 'di naman inutang? Oh<br>
+    
+                    Siguro nga, 'di ako 'yung tipo na kaya gawin lahat
+                    Para sa pamantayan mo
+                    Pero sa kabila ng mga binitawan mong pangako
+                    'Di ito yung inaasahan ko, tawanan bago mo 'ko pangilagan, oh
+                    Isipin mo sana ano tayo dati sa kama niyo
+                    Kahit dama mo at pamasahe lang nasa pitaka ko
+                    Nakakarating tayong alaapak kada tawa mo
+                    Pula mata kahit 'di man nagkaigkayan, uh<br>
+    
+                    Kahit wala na 'kong panahon para umasa pa
+                    Pero ito'y 'di ko rin naman talaga maamin pa
+                    Nakatatak pa rin sa pusong 'di na makahinga
+                    Nandiyan ka na, sa iba ka pa pala lalaya, ha
+                    Hawak kamay ngunit pag 'yo'y sumuko
+                    Bago tuluyang bumitaw, ako'y unti unting
+                    Nagiging bata sa iyong dako<br>
+    
+                    Oh, 'di ba't kahapon lang ikaw ay nagpaalam?
+                    Hindi ko na alam ang aking gagawin
+                    Bakit nasasaktan? Ano ang pagkukulang?
+                    Dapat bang pagbayaran ang 'di naman inutang?<br>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
