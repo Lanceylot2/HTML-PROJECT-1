@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #111;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-image: url(./images/black.jpg);
+        }
+
+        .container {
+            display: flex;
+            width: 90%;
+            max-width: 1200px;
+            height: 80vh;
+            background-color: #181818;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            width: 15%;
+            background-color: #202020;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-right: 1px solid #333;
+        }
+
+        .sidebar h2 {
+            font-size: 1.2rem;
+            color: #f5f5f5;
+            margin-bottom: 20px;
+        }
+
+        .sidebar a {
+            color: #aaa;
+            text-decoration: none;
+            margin: 10px 0;
+            transition: color 0.3s;
+            font-size: 1rem;
+        }
+
+        .sidebar a:hover {
+            color: #1db954;
+        }
+
+        /* Album Cover and Lyrics Section */
+        .content {
+            display: flex;
+            width: 85%;
+        }
+
+        /* Album Cover */
+        .album-cover {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #222;
+            padding: 20px; 
+        }
+
+        .album-cover img {
+            width: 80%;
+            max-width: 400px;
+            border-radius: 10px;
+            margin-bottom: 20px; 
+        }
+
+        /* Lyrics Section */
+        .lyrics {
+            width: 50%;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .lyrics h3 {
+            font-size: 1.5rem;
+            color: #1db954;
+            margin-bottom: 15px;
+        }
+
+        .lyrics p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #ccc;
+            margin-bottom: 10px;
+            white-space: pre-line;
+        }
+
+        /* Scrollbar styling */
+        .lyrics::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .lyrics::-webkit-scrollbar-track {
+            background: #333;
+        }
+
+        .lyrics::-webkit-scrollbar-thumb {
+            background-color: #555;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h2>Menu</h2>
+            <a href="home.html">Home</a>
+            <!-- <a href="#">Explore</a>
+            <a href="#">Library</a>
+            <a href="#">Sign In</a> -->
+        </div>
+
+        <!-- Album Cover and Lyrics -->
+        <div class="content">
+            <div class="album-cover">
+                <img src="./images/citygirl.jpg" alt="Album Cover">
+                <audio controls autoplay loop>
+                    <source src="./music/City Girl.mp3" type="audio/mpeg"> 
+                </audio>
+            </div>
+            <div class="lyrics">
+                <h3>Shanti Dope - City Girl</h3>
+                <p>
+                    Unang gabi niya ko nakasama pagngiti
+                    Sabi niya madami ka'ng babae oy hindi ah
+                    Kasi sa ngayon ikaw ang gusto kong makita
+                    Habang merong alak saking baso'ng malamig ah<br>
+                    
+                    Masaya pero pano kung wala ko'ng kaya
+                    Tulad ng kasama mo'ng iba
+                    'Wag ka padin sana mawala<br>
+                    
+                    Yung larawan mo tumatakbo hanggang sa panaginip
+                    Alaala na naglalaro sa malikot na isip
+                    May ibang nasa harap na
+                    Ba't ikaw ang madalas naaalala pag wasak na'ko
+                    Pwede bang sakin ka nalang ma<br>
+                    
+                    Sana 'wag ka magsasawang maalala
+                    Kung ano yung ating nagawa sa
+                    Unang araw mo ko nakilala<br>
+                    
+                    Pag kasama ko si Hellmerry
+                    May kasama siyang isang bestie
+                    Madalas tatlo kapag ready
+                    Yung iba sabog lahat sexy
+                    Yung isa na mas matanda pa sakin pero may dala-dala'ng candy
+                    Nung ikaw kasama ang safe nasabi ko'ng sakin ka nalang baby<br>
+                    
+                    Unang gabi niya 'ko nakasama pagngiti
+                    Nasabi niya madami ka'ng babae oy hidi ah
+                    Kasi sa ngayon ikaw ang gusto ko makita
+                    Habang merong alak saking baso'ng malamig ah<br>
+                    
+                    Sa isip mo lagi ako'ng may iba
+                    Sa mga gabi'ng ako lang mag isa
+                    Habang hindi ko padin malimutan
+                    Na mas masaya kapag katabi ka
+                    Ano man'g mangyare't maraming gawain tumawag ka lang ako'y parating na
+                    Mundo'ng magulo na to natatakasan ko lamang sa kada kasama kita<br>
+                    
+                    Dami nilang sinasabi
+                    Pero mas maniwala ka saken
+                    Kasi nga iba na ko sa dati
+                    Nung ikaw na kasama ko lagi
+                    O kailangan kita di ko kaya gawin to ng ako lang din kung sakali
+                    Kahit nakakapagod na din pumapawi kapag kagat mo ko sa labi<br>
+                    
+                    Magulo nakaraan ko di masabi sa harap mo
+                    Andyan ka na isang tawag lang sayo'ng kama nabilanggo
+                    Medyo bago lang lahat sakin parang di ako sanay sa ganto
+                    Kasi kahit parang kaibigan lang kita ikaw na yung mahal ko<br>
+                    
+                    Masaya pero pano kung wala ko'ng kaya
+                    Tulad ng kasama mo'ng iba
+                    Wag ka pa din sana mawala
+                    Yung larawan mo tumatakbo hanggang sa panaginip<br>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

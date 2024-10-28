@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #111;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-image: url(./images/black.jpg);
+        }
+
+        .container {
+            display: flex;
+            width: 90%;
+            max-width: 1200px;
+            height: 80vh;
+            background-color: #181818;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            width: 15%;
+            background-color: #202020;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-right: 1px solid #333;
+        }
+
+        .sidebar h2 {
+            font-size: 1.2rem;
+            color: #f5f5f5;
+            margin-bottom: 20px;
+        }
+
+        .sidebar a {
+            color: #aaa;
+            text-decoration: none;
+            margin: 10px 0;
+            transition: color 0.3s;
+            font-size: 1rem;
+        }
+
+        .sidebar a:hover {
+            color: #1db954;
+        }
+
+        /* Album Cover and Lyrics Section */
+        .content {
+            display: flex;
+            width: 85%;
+        }
+
+        /* Album Cover */
+        .album-cover {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #222;
+            padding: 20px; 
+        }
+
+        .album-cover img {
+            width: 80%;
+            max-width: 400px;
+            border-radius: 10px;
+            margin-bottom: 20px; 
+        }
+
+        /* Lyrics Section */
+        .lyrics {
+            width: 50%;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .lyrics h3 {
+            font-size: 1.5rem;
+            color: #1db954;
+            margin-bottom: 15px;
+        }
+
+        .lyrics p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #ccc;
+            margin-bottom: 10px;
+            white-space: pre-line;
+        }
+
+        /* Scrollbar styling */
+        .lyrics::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .lyrics::-webkit-scrollbar-track {
+            background: #333;
+        }
+
+        .lyrics::-webkit-scrollbar-thumb {
+            background-color: #555;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h2>Menu</h2>
+            <a href="home.html">Home</a>
+            <!-- <a href="#">Explore</a>
+            <a href="#">Library</a>
+            <a href="#">Sign In</a> -->
+        </div>
+
+        <!-- Album Cover and Lyrics -->
+        <div class="content">
+            <div class="album-cover">
+                <img src="./images/pakubg.jpg" alt="Album Cover">
+                <audio controls autoplay loop>
+                    <source src="./music/DEMI - Pakundangan ft. Hev Abi (Official Music Video).mp3" type="audio/mpeg"> 
+                </audio>
+            </div>
+            <div class="lyrics">
+                <h3>Padkundanga (feat. Hev abi)</h3>
+                <p>
+                    I am saint
+                    Not a cheater<br>
+
+                    May nalaman nanaman ako sa kakaibang pamamaraan
+                    Hinahanap hanap mo parin ako katulad nung nakaraan
+                    Nag iiba na ang takbo ng mundo pagka magtagpo kahit minsanan
+                    Kaya dahan dahan
+                    Kung tignan mo ko
+                    Wala ka namang niloloko rito
+                    Ikaw na tong nagbibigay motibo
+                    Di mo lang alam katulad mo ko<br>
+
+                    Kung sakyan ko na yang pakundangan ano mang kahulugan
+                    Naghahanap din ng dadantay
+                    Di ako pinaghihintay
+                    Di ako pamigay
+                    Ayoko lang manghinayang
+                    Pwede rin namang dahan dahan
+                    Mas gusto ko yung pinaghahandaan ko<br>
+
+                    Sayo baby ay hindi pa ko handang mangako
+                    Wag ka naman nang madrama wala 'kong atraso
+                    Parehas tayong nag iingat lang oh baby alam kong alam mo
+                    Na wala kong niloloko dito sayo totoo ako di ko tatanggi
+                    Kaso di ko alam kung kakayanin mo yung hapdi
+                    Eh kasi kung tignan mo ko<br>
+
+                    Alam mong di ko pa kaya binabago mo ko
+                    Kung masanggi ko man ang puso mo di ko yan intensyon
+                    Sana di magbago ating direksyon
+                    Oras mo pa rin uutangan ko
+                    Kahit na madami dyan na iba 'la kang kalaban
+                    Di ka minamadali matagal man kailangan
+                    Mong oras baby wala namang kasalanan<br>
+
+                    Kung sakyan ko na yang pakundangan
+                    Ano mang kahulugan
+                    Naghahanap din ng dadantay
+                    Di ako pinaghihintay
+                    Di ako pamigay
+                    Ayoko lang manghinayang
+                    Pwede rin namang dahan dahan
+                    Mas gusto ko yung pinaghahandaan ko<br>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
